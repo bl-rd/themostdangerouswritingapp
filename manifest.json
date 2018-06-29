@@ -1,0 +1,20 @@
+{
+  "short_name": "MDWA",
+  "name": "Most Dangerous Writing App",
+  "icons": [
+    {
+      "src": "/icons/192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icons/512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "background_color": "#FFFEFA",
+  "display": "standalone",
+  "theme_color": "#F45653"
+}

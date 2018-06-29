@@ -44,10 +44,10 @@ $("form").on('submit', function(evt) {
     $input.val(decodeURIComponent(escape(atob(localStorage.getItem('mdwa.draft')))));
     let email = $("#email").val();
 
-    amplitude.getInstance().setUserId(email);
-    let ident = new amplitude.Identify().setOnce('created_at', Math.floor(Date.now() / 1000));
-    amplitude.identify(ident);
-    amplitude.logEvent('sign_up', {'email': email});
+    // amplitude.getInstance().setUserId(email);
+    // let ident = new amplitude.Identify().setOnce('created_at', Math.floor(Date.now() / 1000));
+    // amplitude.identify(ident);
+    // amplitude.logEvent('sign_up', {'email': email});
     localStorage.setItem("mdwa.email", email);
     localStorage.setItem("mdwa.returning", "true");
     danger(0);
@@ -74,7 +74,7 @@ let die = function() {
   if (!run) return;
   let duration = now() - start_time;
   localStorage.setItem('mdwa.draft', btoa(unescape(encodeURIComponent($input.val()))));
-  amplitude.logEvent('stop_writing', {'session_type': session_type, 'session_limit': session_limit, 'duration': duration, 'won': false, 'words': words, 'dangers': danger_count})
+  // amplitude.logEvent('stop_writing', {'session_type': session_type, 'session_limit': session_limit, 'duration': duration, 'won': false, 'words': words, 'dangers': danger_count})
   $input.val("");
   clearInterval(tock);
   run = false;
@@ -118,7 +118,7 @@ let tick = function() {
   }
 
   if (!won && progress >= 1) {
-    amplitude.logEvent('stop_writing', {'session_type': session_type, 'session_limit': session_limit, 'duration': duration, 'won': true, 'words': words, 'dangers': danger_count})
+    // amplitude.logEvent('stop_writing', {'session_type': session_type, 'session_limit': session_limit, 'duration': duration, 'won': true, 'words': words, 'dangers': danger_count})
     return win();
   }
   else if (time_since_stroke > kill) { return die(); }
@@ -189,7 +189,7 @@ let stroke = function(e) {
   danger_zone = false;
 
   if (!run) {
-    amplitude.logEvent('start_writing', {'session_type': session_type, 'session_limit': session_limit});
+    // amplitude.logEvent('start_writing', {'session_type': session_type, 'session_limit': session_limit});
     run = true;
     start_time = now();
     tock = setInterval(tick, 100);

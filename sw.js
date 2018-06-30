@@ -1,20 +1,19 @@
 const CACHE_NAME = 'MDWA';
 const urls = [
-  '/',
-  '/index.html',
-  '/write.html',
-  '/help.html',
-  '/js/min/app.js',
-  '/js/min/common.js',
-  '/js/min/FileSaver.js',
-  '/js/min/jquery.js',
-  '/css/normalize.css',
-  '/css/common.css',
-  '/fonts/mdwa.eot',
-  '/fonts/mdwa.svg',
-  '/fonts/mdwa.ttf',
-  '/fonts/mdwa.woff',
-  '/fonts/mdwa.woff2'
+  'index.html',
+  'write.html',
+  'help.html',
+  'js/min/app.js',
+  'js/min/common.js',
+  'js/min/FileSaver.js',
+  'js/min/jquery.js',
+  'css/normalize.css',
+  'css/common.css',
+  'fonts/mdwa.eot',
+  'fonts/mdwa.svg',
+  'fonts/mdwa.ttf',
+  'fonts/mdwa.woff',
+  'fonts/mdwa.woff2'
 ];
 
 self.addEventListener('install', event => {

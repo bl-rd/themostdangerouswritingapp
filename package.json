@@ -1,0 +1,23 @@
+{
+  "name": "themostdangerouswritingapp",
+  "version": "1.0.0",
+  "description": "> The Most Dangerous Writing App is designed to get you into a state of flow.\r > If you stop typing for more than five seconds, all progress will be lost.",
+  "main": "index.js",
+  "scripts": {
+    "minify": "uglifyjs js/app.js -o js/min/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bl-rd/themostdangerouswritingapp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bl-rd/themostdangerouswritingapp/issues"
+  },
+  "homepage": "https://github.com/bl-rd/themostdangerouswritingapp#readme",
+  "devDependencies": {
+    "uglify-es": "^3.3.9"
+  }
+}

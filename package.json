@@ -13,11 +13,15 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "private": true,
   "bugs": {
     "url": "https://github.com/bl-rd/themostdangerouswritingapp/issues"
   },
   "homepage": "https://github.com/bl-rd/themostdangerouswritingapp#readme",
   "devDependencies": {
     "uglify-es": "^3.3.9"
+  },
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "^2.0.2"
   }
 }
